@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Encrypt or decrypt dots ;)
+  form(action='/decrypt' method='POST')
+    label Input text to decrypt
+    input(type='text' name='messageToDecrypt')
+    button(type='submit') decrypt
+  h3= decrypted
+  form(action='/encrypt' method='POST')
+    label Input text to encrypt
+    input(type='text' name='messageToEncrypt')
+    button(type='submit') encrypt
+  h3= encrypted
